@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/site.webmanifest">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+    
+        <title>
+            Léu Almeida | Front-end Developer
+        </title>
+        <meta name="robots" content="noindex">
+    </head>
+    <body>
+            <script>
+                    // Reload the current page without the browser cache
+                    location.reload(true);
+                    
+                    /*
+                    Browser Language Redirect script- By JavaScript Kit
+                    http://www.javascriptkit.com
+                    */
+                    
+                    //Enter ISO 639-2 letter Language codes to detect (http://www.lingoes.net/en/translator/langcode.htm):
+                    var langcodes=new Array("de", "pt", "en", "default")
+                    
+                    //Enter corresponding redirect URLs (last one is for default URL):
+                    var langredirects=new Array("de/", "pt-br/", "en/", "pt-br/")
+                    
+                    var languageinfo=navigator.language? navigator.language : navigator.userLanguage
+                    var gotodefault=1
+                    
+                    function redirectpage(dest){
+                    if (window.location.replace)
+                    window.location.replace(dest)
+                    else
+                    window.location=dest
+                    }
+                    
+                    for (i=0;i<langcodes.length-1;i++){
+                    if (languageinfo.substr(0,2)==langcodes[i]){
+                    redirectpage(langredirects[i])
+                    gotodefault=0
+                    break
+                    }
+                    }
+                    
+                    if (gotodefault)
+                    redirectpage(langredirects[langcodes.length-1])
+                    </script>
+    </body>
+</html>

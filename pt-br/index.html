@@ -1,0 +1,928 @@
+<?php
+require_once "../includes/counter.php";
+
+$play = "Ver o vídeo";
+$website = "Acessar o site";
+$behance = "Ver no Behance";
+$github = "Repositório GitHub";
+
+?>
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title> João Medeiros | Desenvolvedor Front-End e Mobile</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+
+	<!-- SEO -->
+	<meta name="description" content="Desenvolvimento front-end freelance com foco na experiência do seu usuário. Vamos tomar um café?" />
+	<meta name="keywords" content="léu almeida, léo almeida, leonardo almeida, designer freelancer, ux design freelancer, ui designer freelancer, freelance para sites" />
+
+	<!-- Font -->
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700%7CAllura" rel="stylesheet">
+
+	<!-- Stylesheets -->
+
+	<link href="../assets/common-css/bootstrap.css" rel="stylesheet">
+
+	<link href="../assets/common-css/ionicons.css" rel="stylesheet">
+
+	<link href="../assets/common-css/fluidbox.min.css" rel="stylesheet">
+
+	<link href="../assets/css/style.css" rel="stylesheet">
+
+	<link href="../assets/css/collection.css" rel="stylesheet">
+
+	<link href="../assets/css/responsive.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+	<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+	<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="../assets/favicon/site.webmanifest">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+
+	<!-- MOBILE MENU 
+<div class="FABMenu">
+  <input type="checkbox" checked/>
+  <div class="hamburger">
+    <div class="dots">
+      <span class="first"></span>
+      <span class="second"></span>
+      <span class="third"></span>
+    </div>
+  </div>
+  <div class="action_items_bar">
+    <div class="action_items">
+      <a href="#portfolio">
+      <span class="first_item">
+        <i class="material-icons">
+        code
+        </i>
+      </span>
+  	  </a>
+
+  	  <a href="#about">
+      <span class="second_item">
+        <i class="material-icons">
+        assignment_ind
+        </i>
+      </span>
+  	  </a>
+  	  
+      <span class="third_item">
+      	<a href="#professional">
+        <i class="material-icons">
+        work
+        </i>
+        </a>
+      </span>
+  	  
+  	  
+      <span class="fourth_item">
+      	<a href="#education">
+        <i class="material-icons">
+        school
+        </i>
+        </a>
+      </span>
+  	 
+    </div>
+  </div>
+</div>
+-->
+
+	<!-- Country select -->
+	<nav class="navbar navbar-light bg-light">
+		<span class="navbar-text text-center" style="padding-top: 0 !important;padding-bottom: 0 !important;">
+
+			<!-- PORTUGUESE -->
+			<span data-toggle="tooltip" data-placement="bottom" title="Português">
+				<a href="#" data-toggle="modal" data-target="#portugueseModal">
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+						<circle style="fill:#6DA544;" cx="256" cy="256" r="256" />
+						<polygon style="fill:#FFDA44;" points="256,100.174 467.478,256 256,411.826 44.522,256 " />
+						<circle style="fill:#F0F0F0;" cx="256" cy="256" r="89.043" />
+						<g>
+							<path style="fill:#0052B4;" d="M211.478,250.435c-15.484,0-30.427,2.355-44.493,6.725c0.623,48.64,40.227,87.884,89.015,87.884
+	c30.168,0,56.812-15.017,72.919-37.968C301.362,272.579,258.961,250.435,211.478,250.435z" />
+							<path style="fill:#0052B4;" d="M343.393,273.06c1.072-5.524,1.651-11.223,1.651-17.06c0-49.178-39.866-89.043-89.043-89.043
+	c-36.694,0-68.194,22.201-81.826,53.899c12.05-2.497,24.526-3.812,37.305-3.812C263.197,217.043,309.983,238.541,343.393,273.06z" />
+						</g>
+					</svg>
+				</a>
+			</span>
+
+			<!-- ENGLISH -->
+			<span data-toggle="tooltip" data-placement="bottom" title="English">
+				<a href="#" data-toggle="modal" data-target="#englishModal">
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+						<circle style="fill:#F0F0F0;" cx="256" cy="256" r="256" />
+						<g>
+							<path style="fill:#0052B4;" d="M52.92,100.142c-20.109,26.163-35.272,56.318-44.101,89.077h133.178L52.92,100.142z" />
+							<path style="fill:#0052B4;" d="M503.181,189.219c-8.829-32.758-23.993-62.913-44.101-89.076l-89.075,89.076H503.181z" />
+							<path style="fill:#0052B4;" d="M8.819,322.784c8.83,32.758,23.993,62.913,44.101,89.075l89.074-89.075L8.819,322.784L8.819,322.784
+	z" />
+							<path style="fill:#0052B4;" d="M411.858,52.921c-26.163-20.109-56.317-35.272-89.076-44.102v133.177L411.858,52.921z" />
+							<path style="fill:#0052B4;" d="M100.142,459.079c26.163,20.109,56.318,35.272,89.076,44.102V370.005L100.142,459.079z" />
+							<path style="fill:#0052B4;" d="M189.217,8.819c-32.758,8.83-62.913,23.993-89.075,44.101l89.075,89.075V8.819z" />
+							<path style="fill:#0052B4;" d="M322.783,503.181c32.758-8.83,62.913-23.993,89.075-44.101l-89.075-89.075V503.181z" />
+							<path style="fill:#0052B4;" d="M370.005,322.784l89.075,89.076c20.108-26.162,35.272-56.318,44.101-89.076H370.005z" />
+						</g>
+						<g>
+							<path style="fill:#D80027;" d="M509.833,222.609h-220.44h-0.001V2.167C278.461,0.744,267.317,0,256,0
+	c-11.319,0-22.461,0.744-33.391,2.167v220.44v0.001H2.167C0.744,233.539,0,244.683,0,256c0,11.319,0.744,22.461,2.167,33.391
+	h220.44h0.001v220.442C233.539,511.256,244.681,512,256,512c11.317,0,22.461-0.743,33.391-2.167v-220.44v-0.001h220.442
+	C511.256,278.461,512,267.319,512,256C512,244.683,511.256,233.539,509.833,222.609z" />
+							<path style="fill:#D80027;" d="M322.783,322.784L322.783,322.784L437.019,437.02c5.254-5.252,10.266-10.743,15.048-16.435
+	l-97.802-97.802h-31.482V322.784z" />
+							<path style="fill:#D80027;" d="M189.217,322.784h-0.002L74.98,437.019c5.252,5.254,10.743,10.266,16.435,15.048l97.802-97.804
+	V322.784z" />
+							<path style="fill:#D80027;" d="M189.217,189.219v-0.002L74.981,74.98c-5.254,5.252-10.266,10.743-15.048,16.435l97.803,97.803
+	H189.217z" />
+							<path style="fill:#D80027;" d="M322.783,189.219L322.783,189.219L437.02,74.981c-5.252-5.254-10.743-10.266-16.435-15.047
+	l-97.802,97.803V189.219z" />
+						</g>
+					</svg>
+				</a>
+			</span>
+
+			<!-- DEUTSCH 
+			<span data-toggle="tooltip" data-placement="bottom" title="Deutsch">
+				<a href="#" data-toggle="modal" data-target="#deutschModal">
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+						<path style="fill:#FFDA44;" d="M15.923,345.043C52.094,442.527,145.929,512,256,512s203.906-69.473,240.077-166.957L256,322.783
+	L15.923,345.043z" />
+						<path d="M256,0C145.929,0,52.094,69.472,15.923,166.957L256,189.217l240.077-22.261C459.906,69.472,366.071,0,256,0z" />
+						<path style="fill:#D80027;" d="M15.923,166.957C5.633,194.69,0,224.686,0,256s5.633,61.31,15.923,89.043h480.155
+	C506.368,317.31,512,287.314,512,256s-5.632-61.31-15.923-89.043H15.923z" />
+						</g>
+					</svg>
+				</a>
+
+
+			</span> -->
+	</span></nav>
+
+	<!-- Header -->
+
+	<header>
+		<div class="container">
+			<div class="heading-wrapper">
+				<div class="row">
+					<div class="col-sm-6 col-md-6 col-lg-4">
+						<div class="info">
+							<i class="icon ion-ios-location-outline"></i>
+							<div class="right-area">
+								<h5>São José dos Campos</h5>
+								<h5>SP - Brazil</h5>
+							</div><!-- right-area -->
+						</div><!-- info -->
+					</div><!-- col-sm-4 -->
+
+					<div class="col-sm-6 col-md-6 col-lg-4">
+						<div class="info">
+							<i class="icon ion-ios-telephone-outline"></i>
+							<div class="right-area">
+								<h5>+55 12 98104-5177</h5>
+								<h6>SEG. À SÁB. - DAS 9H ÀS 22H</h6>
+							</div><!-- right-area -->
+						</div><!-- info -->
+					</div><!-- col-sm-4 -->
+
+					<div class="col-sm-6 col-md-6 col-lg-4">
+						<div class="info">
+							<i class="icon ion-ios-chatboxes-outline"></i>
+							<div class="right-area">
+								<h5>jv.medeiros.gallina@gmail.com</h5>
+								<h6>RESPONDO EM ATÉ 24 HORAS</h6>
+							</div><!-- right-area -->
+						</div><!-- info -->
+					</div><!-- col-sm-4 -->
+				</div><!-- row -->
+			</div><!-- heading-wrapper -->
+
+			<!-- a class="downlad-btn" href="curriculo.pdf">Baixar CV   <i class="fas fa-file-download"></i></a -->
+
+			<!-- Modal Temporário -->
+			<!--button type="button" class="downlad-btn-2"  data-toggle="modal" data-target="#Modal" style="float:left;">Curriculum Vitae   <i class="fas fa-file-download"></i></button>
+
+			<button type="button" class="downlad-btn" onClick="openLattes()" target="_blank" style="float:right;">Curriculum Lattes   <i class="fas fa-search"></i></button -->
+			<!-- Fim do Modal Temporário -->
+
+		</div><!-- container -->
+	</header>
+
+	<section class="intro-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-1 col-lg-2"></div>
+				<div class="col-md-10 col-lg-8">
+					<div class="intro">
+						<div class="profile-img"><img src="../images/joao.jpeg" alt=""></div>
+						<h2><b>João Medeiros</b></h2>
+						<h4 class="font-yellow">Desenvolvedor Front-End e Mobile</h4>
+						<ul class="information margin-tb-30">
+							<li><b>IDADE : </b>23 anos</li>
+							<li><b>E-MAIL : </b>jv.medeiros.gallina@gmail.com</li>
+						</ul>
+						<ul class="social-icons">
+							<li><a href="https://github.com/JVMedeiros" target="_blank" data-toggle="tooltip" data-placement="top" title="GitHub"><i class="fab fa-github"></i></a></li>
+<!--							<li><a href="https://www.behance.net/almeida99" target="_blank" data-toggle="tooltip" data-placement="top" title="Behance"><i class="fab fa-behance"></i></a></li> -->
+<!--							<li><a href="https://pt.stackoverflow.com/users/154875/l%c3%a9u-almeida" target="_blank" data-toggle="tooltip" data-placement="top" title="Stack Overflow"><i class="fab fa-stack-overflow"></i></a></li> -->
+							<li><a href="https://www.linkedin.com/in/joão-medeiros/" target="_blank" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="ion-social-linkedin"></i></a></li>
+							<li><a href="https://www.instagram.com/jvctrmd/" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="ion-social-instagram"></i></a></li>
+							<li><a href="https://www.facebook.com/joao.medeiros.79" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="ion-social-facebook"></i></a></li>
+							<!--li><a href="https://wa.me/5511938045313" target="_blank" data-toggle="tooltip" data-placement="top" title="WhatsApp"><i class="fab fa-whatsapp"></i></a></li-->
+						</ul>
+					</div><!-- intro -->
+				</div><!-- col-sm-8 -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</section><!-- intro-section -->
+
+	<section class="portfolio-section section" id="portfolio">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="heading">
+						<h3><b>Portfólio</b></h3>
+						<h6 class="font-lite-black"><b>JOBS RECENTES</b></h6>
+					</div>
+				</div><!-- col-sm-4 -->
+				<div class="col-sm-8">
+					<div class="portfolioFilter clearfix margin-b-80">
+						<a href="#" data-filter="*" class="current"><b>TODOS</b></a>
+						<a href="#" data-filter=".frontend"><b>DESENVOLVIMENTO WEB</b></a>
+						<a href="#" data-filter=".app"><b>APPS</b></a>
+						<a href="#" data-filter=".branding"><b>IDENTIDADE VISUAL</b></a>
+						<a href="#" data-filter=".audiovisual"><b>AUDIOVISUAL</b></a>
+					</div><!-- portfolioFilter -->
+				</div><!-- col-sm-8 -->
+			</div><!-- row -->
+		</div><!-- container -->
+
+		<?php include_once "../includes/portfolio.php" ?>
+
+
+
+		<!-- p-item -->
+
+	</section><!-- portfolio-section -->
+
+
+	<section class="about-section section" id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="heading">
+						<h3><b>Sobre Mim</b></h3>
+						<h6 class="font-lite-black"><b>PESSOAL & PROFISSIONAL</b></h6>
+					</div>
+				</div><!-- col-sm-4 -->
+				<div class="col-sm-8">
+					<p class="mb-2">
+						Olá! Meu nome é João Victor Medeiros, mas pode me chamar de João ou Medeiros.<br />
+						Tenho 23 anos e sou apaixonado por tecnologia e criação desde criança. No momento estou aprendendo e me desenvolvendo na parte de Front-End e Mobile, mas, em breve me dedicarei ao back-end também!.<br />
+						Meu primeiro contato com programação foi quando tinha meus 10, 12 anos de idade, nessa época eu queria um servidor de um jogo chamado Dofus na versão antiga, então, baixei o que precisava e fiz um servidor dele para que eu e meus amigos jogássemos.
+						Meus projetos tem como objetivo satisfazer o usuário em todos os âmbitos, fazendo com que a experiência dele dentro da ferramenta seja a melhor possível!
+					</p>
+					<p class="mb-2">
+						"Do meu ponto de vista, proatividade e otimismo devem caminhar lado a lado, de forma que se alcance ótimos resultados em um ambiente de descontração." Leonardo Almeida.
+					</p>
+					<p class="margin-b-50">
+						Agora que você já me conhece um pouco, <a href="mailto:jv.medeiros.gallina@gmail.com?subject=João, vamos tomar esse café!"><strong>vamos tomar um café?</strong></a>
+					</p>
+
+					<div class="heading hobbies-header">
+						<h3 class="mb-4"><b>Gostos e Peculiaridades</b></h3>
+						<div class="row">
+							<div class="col-sm-3 hobbies">
+								<i class="fas fa-code hobbies"></i>
+								<span class="hobbies">
+									Códigos
+								</span>
+							</div>
+							<div class="col-sm-3 hobbies">
+								<i class="fas fa-coffee hobbies"></i>
+								<span class="hobbies">
+									Café
+								</span>
+							</div>
+							<div class="col-sm-3 hobbies">
+								<i class="fas fa-headphones hobbies"></i>
+								<span class="hobbies">
+									Música
+								</span>
+							</div>
+							<div class="col-sm-3 hobbies">
+								<i class="fas fa-tv hobbies"></i>
+								<span class="hobbies">
+									Séries
+								</span>
+							</div>
+							<div class="col-sm-3 hobbies">
+								<i class="fas fa-dumbbell hobbies mt-5"></i>
+								<span class="hobbies">
+									Academia
+								</span>
+							</div>
+							<div class="col-sm-3 hobbies">
+								<i class="fas fa-pencil-ruler hobbies mt-5"></i>
+								<span class="hobbies">
+									Estudos
+								</span>
+							</div>
+							<div class="col-sm-3 hobbies">
+								<i class="fas fa-book-open hobbies mt-5"></i>
+								<span class="hobbies">
+									Livros
+								</span>
+							</div>
+							<div class="col-sm-3 hobbies">
+								<i class="fas fa-gamepad hobbies mt-5"></i>
+								<span class="hobbies">
+									Jogos
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="heading mt-5">
+						<h3><b>Interesses</b></h3>
+						<p>
+							<span class="badge badge-success"><i class="fas fa-laptop-code"></i></span> Freelance: <strong class="text-success"> estou aberto para novos freelas!</strong><br />
+							<span class="badge badge-warning" style="width: 26px;"><i class="fas fa-thumbtack"></i></span> Experiência in loco: <span class="text-warning"> Estou disponível para novas oportunidades apenas na <strong>Alemanha, Holanda e Inglaterra.</strong>.</span><br />
+						</p>
+					</div>
+
+					<div class="heading">
+						<h3 class="mb-3"><b>Idiomas</b></h3>
+						<div class="line-progress margin-b-30" data-prog-percent="1">
+							<div></div>
+							<p class="progress-title"><b>Português</b> <span class="badge badge-info">Nativo</span></p>
+						</div>
+
+						<div class="line-progress margin-b-30" data-prog-percent=".7">
+							<div></div>
+							<p class="progress-title"><b>Inglês</b> <span class="badge badge-info">Pré-Avançado</span></p>
+						</div>
+
+						<div class="line-progress margin-b-30" data-prog-percent=".3">
+							<div></div>
+							<p class="progress-title"><b>Espanhol</b> <span class="badge badge-info">Básico</span></p>
+						</div>
+
+<!--						<div class="line-progress margin-b-30" data-prog-percent=".0">
+							<div></div>
+							<p class="progress-title"><b>Alemão</b> <span class="badge badge-info">Básico</span> <span class="badge badge-success">Intercâmbio em Jul/2020</span></p>
+						</div></p> -->
+					</div> 
+
+					<!--div class="line-progress margin-b-30" data-prog-percent=".01"><div></div>
+								<p class="progress-title"><b>Alemão</b></p></div-->
+				</div>
+
+			</div><!-- row -->
+		</div><!-- col-sm-8 -->
+		<!-- row -->
+	</section><!-- about-section -->
+
+
+	<section class="skills-section section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 center-text">
+					<div class="heading">
+						<h3><b>Habilidades Técnicas</b></h3>
+						<h6 class="font-lite-black"><b>UM GOLE NO CAFÉ E UMA NOVA ANOTAÇÃO</b></h6>
+					</div>
+				</div><!-- col-sm-12 -->
+
+				<div class="col-sm-12 col-md-6">
+					<h4><b>Desenvolvimento Web / Mobile</b></h4>
+					<h6 class="expert text-uppercase">Conhecimento Envolvido</h6>
+
+					<p class="margin-tb-30">Quanto mais busco aprender, mais percebo o quão grande é o universo de desenvolvimento.<br />
+						Veja algumas das competências nas quais já tenho experiência, além de outras áreas em que permaneço estudando para me capacitar ainda mais.
+					</p>
+
+					<div class="line-progress margin-b-30" data-prog-percent=".85">
+						<p class="progress-title"><b>HTML5</b></p>
+					</div>
+
+					<div class="line-progress margin-b-30" data-prog-percent=".80">
+						<p class="progress-title"><b>Cascade Style Sheets (CSS3)</b></p>
+					</div>
+
+					<div class="line-progress margin-b-30" data-prog-percent="1">
+						<p class="progress-title"><b>Bootstrap</b></p>
+					</div>
+
+					<div class="line-progress margin-b-30" data-prog-percent=".70">
+						<p class="progress-title"><b>EcmaScript 6</b></p>
+					</div>
+
+					<div class="line-progress margin-b-30" data-prog-percent=".55">
+						<p class="progress-title"><b>PHP</b></p>
+					</div>
+
+					<div class="line-progress margin-b-30" data-prog-percent=".45">
+						<p class="progress-title"><b>NodeJS <span class="badge badge-info">Estudando</span></b></p>
+					</div>
+
+					<div class="line-progress margin-b-30" data-prog-percent=".95">
+						<p class="progress-title"><b>WordPress</b></p>
+					</div>
+
+					<div class="line-progress margin-b-30" data-prog-percent=".65">
+						<p class="progress-title"><b>React.JS</b></p>
+					</div>
+
+					<div class="line-progress margin-b-30" data-prog-percent=".65">
+						<p class="progress-title"><b>React Native</b> <span class="badge badge-info">Estudando</span></p>
+					</div>
+
+					<div class="line-progress margin-b-30" data-prog-percent=".85">
+						<p class="progress-title"><b>Search Engine Optimization (SEO)</b></p>
+					</div>
+
+				</div><!-- col-md-6 -->
+
+				<div class="col-sm-12 col-md-6">
+					<h4><b>Diferenciais</b></h4>
+					<h6 class="expert text-uppercase">Design Gráfico, Produção Audiovisual, UX/UI Design e mais!</h6>
+
+					<p class="margin-tb-30">Conhecimento nunca é demais, né?!<br />
+						Pensando nisso, tenho me esforçado para adquirir habilidades que considero fundamentais para um profissional que visa a experiência do usuário e sua usabilidade. Veja algumas abaixo.
+					</p>
+
+					<div class="line-progress margin-b-30" data-prog-percent=".85">
+						<p class="progress-title"><b>PHOTOSHOP</b></p>
+					</div>
+
+					<div class="line-progress margin-b-30" data-prog-percent=".75">
+						<div></div>
+						<p class="progress-title"><b>ILLUSTRATOR</b></p>
+					</div>
+
+					<div class="line-progress margin-b-30" data-prog-percent=".70">
+						<p class="progress-title"><b>PREMIERE</b></p>
+					</div>
+
+					<div class="line-progress margin-b-30" data-prog-percent=".65">
+						<p class="progress-title"><b>AFTER EFFECTS</b></p>
+					</div>
+
+					<div class="line-progress margin-b-30" data-prog-percent="1">
+						<p class="progress-title"><b>E-MAIL MARKETING</b></p>
+					</div>
+
+					<div class="line-progress margin-b-30" data-prog-percent=".45">
+						<p class="progress-title"><b>AUTODESK MAYA <span class="badge badge-info">Estudando</span></b></p>
+					</div>
+
+					<div class="line-progress margin-b-50" data-prog-percent=".75">
+						<p class="progress-title"><b>PROTOTYPING</b></p>
+					</div>
+
+				</div><!-- col-md-6 -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</section><!-- skills-section -->
+
+	<section class="experience-section section" id="professional">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="heading">
+						<h3><b>Experiência Profissional</b></h3>
+						<h6 class="font-lite-black"><b>JOBS ANTERIORES</b></h6>
+					</div>
+				</div><!-- col-sm-4 -->
+				<div class="col-sm-8">
+
+					<div class="experience margin-b-50">
+						<h4><b>ASSISTENTE DESENVOLVEDOR DE FRONT-END</b></h4>
+						<h5 class="font-yellow"><b>UNIVERSIDADE METODISTA DE SÃO PAULO</b></h5>
+						<h6 class="margin-t-10">JUNHO DE 2019 - ATUALMENTE</h6>
+						<p class="font-semi-white margin-tb-30">
+							<ul class="list margin-b-30">
+								<li>Desenvolvimento de projetos web com o uso de linguagens como HTML5, CSS3, JavaScript e Plone;</li>
+								<li>Criação e disparo de e-mail marketing;</li>
+								<li>Criação e envio de SMS marketing.</li>
+							</ul>
+						</p>
+					</div>
+
+					<div class="experience margin-b-50">
+						<h4><b>ESTAGIÁRIO WEB DESIGNER</b></h4>
+						<h5 class="font-yellow"><b>UNIVERSIDADE METODISTA DE SÃO PAULO</b></h5>
+						<h6 class="margin-t-10">JULHO DE 2017 - JUNHO DE 2019</h6>
+						<p class="font-semi-white margin-tb-30">
+							<ul class="list margin-b-30">
+								<li>Criação e disparo de e-mail marketing;</li>
+								<li>Criação e envio de SMS marketing;</li>
+								<li>Atualização de conteúdo front-end.</li>
+							</ul>
+						</p>
+					</div>
+
+					<div class="experience margin-b-50">
+						<h4><b>APRENDIZ WEB DESIGNER</b></h4>
+						<h5 class="font-yellow"><b>UNIVERSIDADE METODISTA DE SÃO PAULO</b></h5>
+						<h6 class="margin-t-10">JULHO DE 2016 - JUNHO DE 2017</h6>
+						<p class="font-semi-white margin-tb-30">
+							<ul class="list margin-b-30">
+								<li>Criação e disparo de e-mail marketing;</li>
+								<li>Criação e envio de SMS marketing.</li>
+							</ul>
+						</p>
+					</div>
+
+					<div class="experience margin-b-50">
+						<h4><b>ORGANIZADOR DE EVENTOS</b></h4>
+						<h5 class="font-yellow"><b>FREELANCE</b></h5>
+						<h6 class="margin-t-10">JULHO DE 2016 - DEZEMBRO DE 2017</h6>
+						<p class="font-semi-white margin-tb-30">
+							<ul class="list margin-b-30">
+								<li>Gestão de pessoas, sendo estes, vendedores e promotores, seguranças, bombeiros e equipe de áudio (estrutural e musical); </li>
+								<li>Contratação de promotores, seguranças, local e infraestrutura do evento num todo;</li>
+								<li>Marketing digital.</li>
+							</ul>
+						</p>
+					</div>
+
+					<div class="experience margin-b-50">
+						<h4><b>APRENDIZ AUXILIAR ADMINISTRATIVO</b></h4>
+						<h5 class="font-yellow"><b>INSAT RASTREADORES</b></h5>
+						<h6 class="margin-t-10">ABRIL DE 2014 - ABRIL DE 2015</h6>
+						<p class="font-semi-white margin-tb-30">
+							<ul class="list margin-b-30">
+								<li>Uso de CMS interno;</li>
+								<li>Auxiliar administrativo quanto o gerenciamento de rastreadores via satélite;</li>
+								<li>Controle de clientes adimplentes e inadimplentes.</li>
+							</ul>
+						</p>
+
+					</div><!-- experience -->
+
+					<div class="experience margin-b-50">
+
+						<p class="font-semi-white margin-tb-30">
+							<a class="btn btn-warning btn-lg btn-block" href="https://www.linkedin.com/in/leonardoalmeida99/" target="_blank">Visualizar perfil no LinkedIn</a>
+						</p>
+					</div><!-- experience -->
+
+				</div><!-- col-sm-8 -->
+			</div><!-- row -->
+		</div><!-- container -->
+
+	</section><!-- experience-section -->
+
+
+
+	<section class="education-section section" id="education">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="heading">
+						<h3><b>Educação</b></h3>
+						<h6 class="font-lite-black"><b>CARREIRA ACADÊMICA</b></h6>
+					</div>
+				</div><!-- col-sm-4 -->
+				<div class="col-sm-8">
+					<div class="education-wrapper">
+						<div class="education margin-b-50">
+							<h4 class="text-uppercase"><b>BACHARELADO EM PUBLICIDADE E PROPAGANDA</b></h4>
+							<h5 class="font-yellow text-uppercase"><b>UMESP – UNIVERSIDADE METODISTA DE SÃO PAULO</b></h5>
+							<h6 class="font-lite-black margin-t-10 text-uppercase">GRADUADO EM DEZEMBRO DE 2020 <span class="badge badge-pill badge-warning">4 ANOS</span> <!-- a href="#" data-toggle="modal" data-target="#modalCertificadoFalse" class="badge badge-pill badge-danger" title="Certificado Indisponível">VER CERTIFICADO</a -->
+							</h6>
+							<p class="margin-tb-30">
+								Graduação presencial na Universidade Metodista de São Paulo, no Rudge Ramos - São Bernardo do Campo, com 4 anos de duração. Alguns dos projetos realizados durante o curso podem ser visualizados <a href="https://www.behance.net/almeida99" style="font-weight: bold;" target="_blank">clicando aqui</a>.
+							</p>
+						</div><!-- education -->
+
+						<div class="education margin-b-50">
+							<h4 class="text-uppercase"><b>CURSO DE EXTENSÃO EAD EM MARKETING DIGITAL</b></h4>
+							<h5 class="font-yellow text-uppercase"><b>FGV - FUNDAÇÃO GETÚLIO VARGAS</b></h5>
+							<h6 class="font-lite-black margin-t-10 text-uppercase">CONCLUÍDO EM JANEIRO DE 2019<span class="badge badge-pill badge-warning">5 HORAS</span> <a href="../certificados/marketing-digital.pdf" class="badge badge-pill badge-danger" target="_blank" title="Certificado Marketing Digital">VER CERTIFICADO</a></h6>
+							<p class="margin-tb-30">
+								Curso autoinstrucional a distância da Fundação Getúlio Vargas, que explica e instrui as técnicas e fundamentos do Marketing Digital e suas aplicações.
+							</p>
+						</div><!-- education -->
+
+						<div class="education margin-b-50">
+							<h4 class="text-uppercase"><b>CURSO DE EXTENSÃO EAD EM TECNOLOGIA DA INFORMAÇÃO E COMUNICAÇÃO</b></h4>
+							<h5 class="font-yellow"><b>SENAI</b></h5>
+							<h6 class="font-lite-black margin-t-10 text-uppercase">CONCLUÍDO EM DEZEMBRO DE 2018 <span class="badge badge-pill badge-warning">14 HORAS</span> <a href="../certificados/tic.pdf" class="badge badge-pill badge-danger" target="_blank" title="Certificado TIC">VER CERTIFICADO</a></h6>
+							<p class="margin-tb-30">
+								Curso introdutório sobre Tecnologia da Informação e Comunicação, que visa os conhecimentos sobre hardware, noções de segurança de rede, entre outros módulos para noção básica de TIC.
+							</p>
+						</div><!-- education -->
+
+						<div class="education margin-b-50">
+							<h4 class="text-uppercase"><b>CURSO DE EXTENSÃO EAD DE SEO (SEARCH ENGINE OPTIMIZATION)</b></h4>
+							<h5 class="font-yellow"><b>RICARDO ZACHO</b></h5>
+							<h6 class="font-lite-black margin-t-10 text-uppercase">Finished on December 2018 <span class="badge badge-pill badge-warning">5 HORAS</span> <a href="../certificados/seo.pdf" class="badge badge-pill badge-danger" target="_blank" title="Certificado SEO">VER CERTIFICADO</a></h6>
+							<p class="margin-tb-30">
+								Online Course about the advanced notions of Search Engine Optimization, which is the optimization of content and development for a well-indexed website on the search engines (Google, Yahoo, Bing etc.)
+							</p>
+						</div><!-- education -->
+
+						<div class="education margin-b-50">
+							<h4 class="text-uppercase"><b>CURSO DE EXTENSÃO EAD DE DESIGN DE INTERFACE</b></h4>
+							<h5 class="font-yellow"><b>JAMILTON DAMASCENO, ANDRE BERNARDES E JORGE SANT ANA</b></h5>
+							<h6 class="font-lite-black margin-t-10 text-uppercase">CONCLUÍDO EM DEZEMBRO DE 2018 <span class="badge badge-pill badge-warning">15 HORAS</span> <a href="../certificados/design-de-interface.pdf" class="badge badge-pill badge-danger" target="_blank" title="Certificado Design de Interface">VER CERTIFICADO</a></h6>
+							<p class="margin-tb-30">
+								Curso on-line para melhorar na teoria e na prática, os conceitos de UX Design, UI Design, Arquitetura de Informação, Prototipagem, além de conceitos de Usabilidade, Wireframes e Layouts, Sistemas de Organização e Navegação e muito mais.
+							</p>
+						</div><!-- education -->
+
+						<div class="education margin-b-50">
+							<h4 class="text-uppercase"><b>CURSO DE EXTENSÃO EAD DE BOOTSTRAP 4</b></h4>
+							<h5 class="font-yellow"><b>PONTO CURSOS</b></h5>
+							<h6 class="font-lite-black margin-t-10 text-uppercase">CONCLUÍDO EM DEZEMBRO DE 2018 <span class="badge badge-pill badge-warning">10,5 HORAS</span> <a href="../certificados/bootstrap.pdf" class="badge badge-pill badge-danger" target="_blank" title="Certificado Bootstrap">VER CERTIFICADO</a></h6>
+							<p class="margin-tb-30">
+								Curso completo de um dos maiores frameworks open source web. Aprendendo todas as funcionalidades e opções que o Bootstrap dispõe ao desenvolvedor e ao consumidor.
+							</p>
+						</div><!-- education -->
+
+						<div class="education margin-b-50">
+							<h4 class="text-uppercase"><b>CURSO DE EXTENSÃO PRESENCIAL EM MONITORIA DE TURISMO</b></h4>
+							<h5 class="font-yellow"><b>FORMA TURISMO</b></h5>
+							<h6 class="font-lite-black margin-t-text-uppercase">CONCLUÍDO EM FEVEREIRO DE 2017 <span class="badge badge-pill badge-warning">40 HORAS</span> <a href="#" data-toggle="modal" data-target="#modalCertificadoFalse" class="badge badge-pill badge-danger" title="Certificado Indisponível">VER CERTIFICADO</a> <!-- a href="../certificados/forma-turismo" class="badge badge-pill badge-danger" target="_blank" title="Certificado Forma Turismo">VER CERTIFICADO</a -->
+							</h6>
+							<p class="margin-tb-30">
+								Curso presencial com carga horária de 40 Horas focada na realização comunicacional de Turismo. Com Programação Neurolinguística (PNL), comunicação verbal e não verbal, entre outras técnicas que colaboram com a comunicação com o público.
+							</p>
+						</div><!-- education -->
+
+						<div class="education margin-b-50">
+							<h4 class="text-uppercase"><b>CURSO DE EXTENSÃO EAD EM AFTER EFFECTS</b></h4>
+							<h5 class="font-yellow"><b>PUFLIX</b></h5>
+							<h6 class="font-lite-black margin-t-10 text-uppercase">CONCLUÍDO EM NOVEMBRO DE 2017 <span class="badge badge-pill badge-warning">11 HORAS</span> <a href="#" data-toggle="modal" data-target="#modalCertificadoFalse" class="badge badge-pill badge-danger" title="Certificado Indisponível">VER CERTIFICADO</a><!-- a href="../certificados/after-effects.pdf" class="badge badge-pill badge-danger" target="_blank" title="Certificado After Effects">VER CERTIFICADO</a -->
+							</h6>
+							<p class="margin-tb-30">
+								Curso prático e teórico de Adobe After Effects CC, realizado em 2017 a distância, para aumentar os conhecimentos em animação e edições profissionais de vídeos.
+							</p>
+						</div><!-- education -->
+
+						<div class="education margin-b-50">
+							<h4 class="text-uppercase"><b>ENSINO MÉDIO COMPLETO</b></h4>
+							<h5 class="font-yellow"><b>COLÉGIO PERFIL PÁDUA</b></h5>
+							<h6 class="font-lite-black margin-t-10 text-uppercase">FORMADO EM DEZEMBRO DE 2016
+								<!-- a href="#" data-toggle="modal" data-target="#modalCertificadoFalse" class="badge badge-pill badge-danger" title="Certificado Indisponível">VER CERTIFICADO</a -->
+							</h6>
+							<p class="margin-tb-30">
+								Ensino médio concluído em dezembro de 2016, no colégio particular Perfil Pádua (Jd. Santa Cruz, na zona sul de São Paulo).
+							</p>
+						</div><!-- education -->
+
+						<div class="education margin-b-50">
+							<h4 class="text-uppercase"><b>CURSO DE EXTENSÃO PRESENCIAL EM COMPUTAÇÃO GRÁFICA</b></h4>
+							<h5 class="font-yellow"><b>SAGA - SCHOOL OF ART, GAME AND ANIMATION</b></h5>
+							<h6 class="font-lite-black margin-t-10 text-uppercase">OUTUBRO DE 2013 <span class="badge badge-pill badge-warning">3 ANOS</span> <!-- a href="#" data-toggle="modal" data-target="#modalCertificadoFalse" class="badge badge-pill badge-danger" title="Certificado Indisponível">VER CERTIFICADO</a -->
+							</h6>
+							<p class="margin-tb-30">
+								Curso profissionalizante de computação gráfica realizado no bairro Tatuapé, na zona leste de São Paulo, com 3 anos de duração. Com uma carga de módulos nos mais diversos softwares, tais como, After Effects, Adobe Premiere, Dreaweaver, Fireworks, Photoshop, Autodesk Maya, e técnicas como Pintura Digital.
+							</p>
+						</div><!-- education -->
+
+						<div class="education margin-b-50">
+							<h4 class="text-uppercase"><b>CURSO DE EXTENSÃO PRESENCIAL EM INTRODUÇÃO A WEB DESIGN</b></h4>
+							<h5 class="font-yellow"><b>ESCOLA OBJETIVA</b></h5>
+							<h6 class="font-lite-black margin-t-10 text-uppercase">CONCLUÍDO EM MARÇO DE 2010
+								<!--a href="#" data-toggle="modal" data-target="#modalCertificadoFalse" class="badge badge-pill badge-danger" title="Certificado Indisponível">VER CERTIFICADO</a-->
+							</h6>
+							<p class="margin-tb-30">
+								Curso intrudotório de Web Design em softwares como Macromedia Flash 8, Macromedia Fireworks 8, Macromedia Dreamweaver 8 - estes que posteriormente se tornariam Adobe - HTML Básico, CSS Básico.
+							</p>
+						</div><!-- education -->
+
+					</div><!-- education-wrapper -->
+				</div><!-- col-sm-8 -->
+			</div><!-- row -->
+		</div><!-- container -->
+
+	</section><!-- about-section -->
+
+	<section class="counter-section" id="counter">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="counter margin-b-30">
+						<h1 class="title"><b><span class="counter-value" data-duration="400" data-count="2">0</span></b></h1>
+						<h5 class="desc"><b>Softwares Utilizados</b></h5>
+					</div><!-- counter -->
+				</div><!-- col-md-3-->
+
+				<div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="counter margin-b-30">
+						<h1 class="title"><b><span class="counter-value" data-duration="600" data-count="2">0</span></b></h1>
+						<h5 class="desc"><b>Projetos Concluídos</b></h5>
+					</div><!-- counter -->
+				</div><!-- col-md-3-->
+
+				<div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="counter margin-b-30">
+						<h1 class="title"><b><span class="counter-value" data-duration="800" data-count="2">0</span></b></h1>
+						<h5 class="desc"><b>Clientes Satisfeitos</b></h5>
+					</div><!-- counter -->
+				</div><!-- col-md-3-->
+
+				<div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="counter margin-b-30">
+						<h1 class="title"><b><span class="counter-value" data-duration="1000" data-count="2">0</span></b></h1>
+						<h5 class="desc"><b>Copos de Café</b></h5>
+					</div><!-- margin-b-30 -->
+				</div><!-- col-md-3-->
+
+			</div><!-- row-->
+		</div><!-- container-->
+	</section><!-- counter-section-->
+
+	<section class="quoto-section center-text">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<i class="icon ion-quote"></i>
+					<h3><b>Você nunca sabe quais <span class="font-yellow-correct">resultados virão da sua ação,</span></b></h3>
+					<h3><b>mas se você não fizer nada, não haverão <span class="font-yellow-correct">resultados</span>.</b></h3>
+					<h5><b><span class="font-yellow-correct">Mahatma Gandhi</span></b></h5>
+				</div><!-- col-sm-12 -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</section><!-- quoto-section -->
+
+	<footer>
+		<p class="copyright">
+			Desenvolvido com <i class="fas fa-heart font-yellow-correct"></i> e muito <i class="fas fa-mug-hot font-yellow-correct"></i> | <a href="mailto:leo@webid.net.br" target="_blank">#MandaJobs</a>
+		</p>
+
+
+
+		<!-- Modal -->
+		<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLongTitle">Curriculum Vitae Indisponível</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<span class="font-weight-light">Peço desculpas pelo transtorno, em breve meu currículo estará aqui.</span>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- FIM DO MODAL -->
+
+		<!-- Modal Certificados -->
+		<div class="modal fade" id="modalCertificadoFalse" tabindex="-1" role="dialog" aria-labelledby="modalCertificadoFalseTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="modalCertificadoFalseTitle">Certificado Indisponível</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						Peço desculpas pelo transtorno, infelizmente esse certificado não está disponível :(
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Fim Modal Certificados -->
+
+		<!-- English Modal -->
+		<div class="modal fade" id="englishModal" tabindex="-1" role="dialog" aria-labelledby="englishModalTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="englishModalTitle">Deseja sair dessa página?</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						Identifiquei através da sua localização que esse é o melhor idioma pra você.
+						Deseja mesmo assim ir para a versão em inglês?
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+						<a href="../en" class="btn btn-success">Continuar</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- English Modal end -->
+
+		<!-- Portuguese Modal -->
+		<div class="modal fade" id="portugueseModal" tabindex="-1" role="dialog" aria-labelledby="portugueseModalTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="portugueseModalTitle">Ops!</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						Você já está nessa página :)
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- English Modal end -->
+
+		<!-- Deutsch Modal -->
+		<div class="modal fade" id="deutschModal" tabindex="-1" role="dialog" aria-labelledby="deutschModalTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="deutschModalTitle">Deseja sair dessa página?</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						Identifiquei através da sua localização que esse é o melhor idioma pra você.
+						Deseja mesmo assim ir para a versão em alemão?
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+						<a href="../de" class="btn btn-success">Continuar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Deutsch Modal end -->
+
+
+	</footer>
+
+	<!-- SCIPTS -->
+
+	<script src="../assets/common-js/jquery-3.2.1.min.js"></script>
+
+	<script src="../assets/common-js/tether.min.js"></script>
+
+	<script src="../assets/common-js/bootstrap.js"></script>
+
+	<script src="../assets/common-js/isotope.pkgd.min.js"></script>
+
+	<script src="../assets/common-js/jquery.waypoints.min.js"></script>
+
+	<script src="../assets/common-js/progressbar.min.js"></script>
+
+	<script src="../assets/common-js/jquery.fluidbox.min.js"></script>
+
+	<script src="../assets/common-js/scripts.js"></script>
+
+	<script type="text/javascript">
+		function openLattes() {
+			window.open("http://lattes.cnpq.br/0577768186253470");
+		}
+		$(function() {
+			$('[data-toggle="tooltip"]').tooltip()
+		})
+	</script>
+
+
+
+</body>
+
+</html>
